@@ -1,14 +1,5 @@
-# reading_time
- A small dart library that predicts ( more like calculates ) reading time like medium does .
- ```reading_time``` helps you calculate / estimate reading time for any text . It is very useful if you are building an article listing , news or blog like app or website with dart . It is the dart port of the original [reading-time](https://github.com/ngryman/reading-time) module ( FOR JS ) by [Nicolas](https://github.com/ngryman).
-
-There are virtually no locale limit . It is using 200 (wpm) because an average reader can read 200 words per minute .
-
-# Example
-```dart
 import 'package:reading_time/reading_time.dart';
 
-// from https://www.lipsum.com/feed/html
 const EXAMPLE_TEXT = """
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempus tempor lacus id commodo. Nullam fermentum vitae nisi eget scelerisque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse elementum at sapien vitae rutrum. Vestibulum id ex et sem vehicula fermentum sed non tortor. Integer iaculis, justo et blandit sagittis, odio ligula molestie sem, eu lobortis metus nibh quis nibh. Fusce ornare varius tellus, ac porta est. In eleifend iaculis erat vel iaculis. Maecenas sit amet aliquet diam. Proin eu semper tortor. Maecenas accumsan rutrum erat, ornare ullamcorper ipsum hendrerit quis. Sed at pulvinar erat.
 
@@ -28,20 +19,3 @@ main(List<String> args) {
   print(reader['time']); // 129900.0
   print(reader['minutes']); // 2.165
 }
-```
-> If the text is too small , the text property will return 'less than a minute'
-
-# Args
-By default ```readingTime``` takes one positional argument and one optional ```wordsPerMinute``` argument which takes an int value. It will return a ```Map``` . You can check the code at ```lib/reading_time.dart``` file .
-
-# Map properties
-It returns a map , you can access it's properties like this ```readingTime(text)['text']``` .
-Here are all the properties it exposes .
-```dart
-{
-  'text': String,
-  'minutes': double,
-  'time': double,
-  'words': int
-}
-```
