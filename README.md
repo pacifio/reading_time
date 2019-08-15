@@ -1,4 +1,7 @@
 # reading_time
+[![Build Status](https://travis-ci.org/pacifio/reading_time.svg?branch=master)](https://travis-ci.org/pacifio/reading_time)
+<br>
+
  A small dart library that predicts ( more like calculates ) reading time like medium does .
  ```reading_time``` helps you calculate / estimate reading time for any text . It is very useful if you are building an article listing , news or blog like app or website with dart . It is the dart port of the original [reading-time](https://github.com/ngryman/reading-time) module ( FOR JS ) by [Nicolas](https://github.com/ngryman).
 
