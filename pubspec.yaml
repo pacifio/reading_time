@@ -1,5 +1,5 @@
 name: reading_time
-version: 1.0.0
+version: 1.0.0+1
 authors:
   - Adib Mohsin <adibmohsin.root@gmail.com>
 description: A small dart library that predicts / calculates reading time like medium does .
