@@ -1,3 +1,7 @@
+## 1.0.0+2
+
+* Fixed code errors
+
 ## 1.0.0+1
 
 * Fixed readme
