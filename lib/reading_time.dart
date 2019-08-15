@@ -40,8 +40,12 @@ Map readingTime(
 }) {
   var words = 0, start = 0, end = text.length - 1, wordBound, i;
   wordBound = _ansiWordBound;
-  while (wordBound(text[start])) start++;
-  while (wordBound(text[end])) end--;
+  while (wordBound(text[start])) {
+    start++;
+  }
+  while (wordBound(text[end])) {
+    end--;
+  }
 
   for (i = start; i <= end;) {
     for (; i <= end && !wordBound(text[i]); i++);
@@ -52,9 +56,6 @@ Map readingTime(
   var minutes = words / wordsPerMinute;
   var time = minutes * 60 * 1000;
   var displayed = double.parse(minutes.toStringAsFixed(2)).round();
-  print(minutes.runtimeType);
-  print(time.runtimeType);
-  print(words.runtimeType);
 
   return (displayed > 0
       ? {
