@@ -1,13 +1,15 @@
-# reading_time
+# Reaqding time
+
 [![Build Status](https://travis-ci.org/pacifio/reading_time.svg?branch=master)](https://travis-ci.org/pacifio/reading_time)
 <br>
 
- A small dart library that predicts ( more like calculates ) reading time like medium does .
- reading_time helps you calculate / estimate reading time for any text . It is very useful if you are building an article listing , news or blog like app or website with dart . It is the dart port of the original [reading-time](https://github.com/ngryman/reading-time) module ( FOR JS ) by [Nicolas](https://github.com/ngryman).
+A small dart library that predicts ( more like calculates ) reading time like medium does .
+reading_time helps you calculate / estimate reading time for any text . It is very useful if you are building an article listing , news or blog like app or website with dart . It is the dart port of the original [reading-time](https://github.com/ngryman/reading-time) module ( FOR JS ) by [Nicolas](https://github.com/ngryman).
 
 There are virtually no locale limit . It is using 200 (wpm) because an average reader can read 200 words per minute .
 
-# Example
+## Example
+
 ```dart
 import 'package:reading_time/reading_time.dart';
 
@@ -26,25 +28,20 @@ Maecenas eleifend lobortis lectus vitae porttitor. Suspendisse at ex nec ante lo
 
 main(List<String> args) {
   var reader = readingTime(EXAMPLE_TEXT);
-  print(reader['words']); // 433
-  print(reader['text']); // 2 min read
-  print(reader['time']); // 129900.0
-  print(reader['minutes']); // 2.165
+  print(reader.words); // 433
+  print(reader.msg); // 2 min read
+  print(reader.time); // 129900.0
+  print(reader.minutes); // 2.165
 }
 ```
+
 > If the text is too small , the text property will return 'less than a minute'
 
-# Args
-By default <code>readingTime</code> takes one positional argument and one optional <code>wordsPerMinute</code> argument which takes an int value. It will return a Map . You can check the code at "lib/reading_time.dart" file .
+## Options
 
-# Map properties
-It returns a map , you can access it's properties like this <code>readingTime(text)['text']</code> .
-Here are all the properties it exposes .
-```dart
-{
-  'text': String,
-  'minutes': double,
-  'time': double,
-  'words': int
-}
-```
+| parameter | type   | required | default              |
+|-----------|--------|----------|----------------------|
+| text      | String | true     |                      |
+| wpm       | int    | false    | 200                  |
+| suffix    | String | false    | 'min read'           |
+| lessMsg   | String | false    | 'less than a minute' |

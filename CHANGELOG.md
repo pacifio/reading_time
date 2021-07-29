@@ -1,3 +1,8 @@
+## 2.0.0
+
+* Updated for null safety
+* A better return model
+
 ## 1.0.0+2
 
 * Fixed code errors

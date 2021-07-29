@@ -14,8 +14,8 @@ Maecenas eleifend lobortis lectus vitae porttitor. Suspendisse at ex nec ante lo
 
 main(List<String> args) {
   var reader = readingTime(EXAMPLE_TEXT);
-  print(reader['words']); // 433
-  print(reader['text']); // 2 min read
-  print(reader['time']); // 129900.0
-  print(reader['minutes']); // 2.165
+  print(reader.words); // 433
+  print(reader.msg); // 2 min read
+  print(reader.time); // 129900.0
+  print(reader.minutes); // 2.165
 }

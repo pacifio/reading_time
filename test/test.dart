@@ -21,10 +21,10 @@ const SMALL =
 
 main() {
   test('testing out reading', () {
-    expect(readingTime(TEST_STR)['text'], '1 min read');
-    expect(readingTime(MULTILINE)['text'], '2 min read');
+    expect(readingTime(TEST_STR).msg, '1 min read');
+    expect(readingTime(MULTILINE).msg, '2 min read');
   });
   test('test out small text', () {
-    expect(readingTime(SMALL)['text'], 'less than a minute');
+    expect(readingTime(SMALL).msg, 'less than a minute');
   });
 }
